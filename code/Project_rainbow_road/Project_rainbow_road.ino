@@ -72,11 +72,11 @@ void processControllers() {
     ControllerPtr ctl = myControllers[i];
     if (ctl && ctl->isConnected() && ctl->isGamepad()) {
       
-      // Triggers uitlezen via de juiste pijl-notatie (->)
+      // Triggers uitlezen
       int triggerRight = ctl->throttle(); // RT (gas / vooruit)
       int triggerLeft  = ctl->brake();     // LT (rem / achteruit)
       
-      // Joystick X-as uitlezen voor sturen (links / rechts)
+      // Joystick X-as uitlezen
       int joystickX = ctl->axisX(); // Loopt van -511 tot 511
 
       // Deadzones values
@@ -88,7 +88,7 @@ void processControllers() {
       bool currentLeft     = (joystickX < -joystickDeadzone);
       bool currentRight    = (joystickX > joystickDeadzone);
 
-      // --- FORWARD (RT) ---
+      // Forward (RT)
       if (currentForward != lastForward) {
         digitalWrite(pinForward, currentForward ? HIGH : LOW);
         if (currentForward) Serial.println("Vooruit (RT ingedrukt): AAN");
@@ -96,7 +96,7 @@ void processControllers() {
         lastForward = currentForward;
       }
 
-      // --- BACKWARD (LT) ---
+      // Backward (LT)
       if (currentBackward != lastBackward) {
         digitalWrite(pinBackward, currentBackward ? HIGH : LOW);
         if (currentBackward) Serial.println("Achteruit (LT ingedrukt): AAN");
@@ -104,7 +104,7 @@ void processControllers() {
         lastBackward = currentBackward;
       }
 
-      // --- LEFT (Joystick Links) ---
+      // Left (Joystick left)
       if (currentLeft != lastLeft) {
         digitalWrite(pinLeft, currentLeft ? HIGH : LOW);
         if (currentLeft) Serial.println("Links (Joystick): AAN");
@@ -112,7 +112,7 @@ void processControllers() {
         lastLeft = currentLeft;
       }
 
-      // --- RIGHT (Joystick Rechts) ---
+      // Right (Joystick right)
       if (currentRight != lastRight) {
         digitalWrite(pinRight, currentRight ? HIGH : LOW);
         if (currentRight) Serial.println("Rechts (Joystick): AAN");
