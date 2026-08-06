@@ -1,2 +1,3 @@
 # Project-Rainbow-Road
-A custom wireless RC car powered by an ESP32 microcontroller and a PN2222 transistor circuit. It interfaces with a standard Xbox controller via Bluetooth (Bluepad32) to proportionally control steering and throttle.
+## Description
+Hacking a cheap RC car so I can ditch the stock controller and use an Xbox controller. Powered by an ESP32 microcontroller and a PN2222 transistor circuit, it interfaces with a standard Xbox controller via Bluetooth (using Bluepad32) to wirelessly control steering and throttle.
