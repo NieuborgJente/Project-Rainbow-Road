@@ -4,3 +4,6 @@ Hacking a cheap RC car so I can ditch the stock controller and use an Xbox contr
 
 ## How to use
 You can follow the build guide via [https://www.instructables.com/How-to-Control-Your-RC-Car-With-a-Gaming-Console-C/](https://www.instructables.com/How-to-Control-Your-RC-Car-With-a-Gaming-Console-C/)
+
+## Demo video
+You can watch the demo video via https://youtu.be/GJhjxcU9Xr0?is=N1iNJ0a990tsNLBY
